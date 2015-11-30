@@ -17,7 +17,7 @@ directly from [`prompt-sync`][], for advanced usage.
 ```js
 var prompt = require('incite')
 
-var name = prompt('...name? [y/N] ')
+var name = prompt('...name? ')
 
 console.log('howdydoodydiddlyooo ' + name)
 ```
