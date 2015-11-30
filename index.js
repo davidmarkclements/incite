@@ -1,4 +1,4 @@
-var prompt = require('prompt-sync').prompt
+var prompt = require('prompt-sync')
 
 module.exports = incite
 
@@ -8,7 +8,7 @@ function incite(question) {
   var wasRaw = process.stdin.isRaw
 
   //change value to ask when https://github.com/0xxff/prompt-sync/pull/7 lands
-  var ans = prompt({value: question, echo: ''})
+  var ans = prompt.prompt({value: question, echo: ''})
 
   //remove when https://github.com/0xxff/prompt-sync/pull/6 lands
   process.stdin.setRawMode(wasRaw)
@@ -20,3 +20,7 @@ function incite(question) {
   return ans.replace(question, '')
 
 }
+
+incite.prompt = prompt.prompt
+incite.save = prompt.save
+incite.init = prompt.init
