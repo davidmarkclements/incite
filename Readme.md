@@ -8,10 +8,6 @@ Simple, synchronous CLI prompt.
 require('incite') => (question = '') => String => answer
 ```
 
-We also supply methods (`init, `prompt`, `save`)
-directly from [`prompt-sync`][], for advanced usage. 
-
-
 ## Usage
 
 ```js
@@ -21,12 +17,6 @@ var name = prompt('...name? ')
 
 console.log('howdydoodydiddlyooo ' + name)
 ```
-
-## About
-
-Layer on top of of [`prompt-sync`][], for more functionality 
-use [`prompt-sync`][] (either via methods on `incite` or as
-it's own module).
 
 ## Synchronous by Design
 
@@ -38,5 +28,3 @@ requirements).
 ## Credit
 
 * Sponsored by nearForm
-
-[`prompt-sync`]: http://npmjs.com/prompt-sync
